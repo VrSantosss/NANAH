@@ -1,0 +1,139 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: 
+      url('https://cdn.pixabay.com/photo/2021/01/23/19/55/heart-5943529__480.png'),
+      url('https://cdn.pixabay.com/photo/2021/01/23/19/55/heart-5943529__480.png'); /* Adicionando a imagem duas vezes */
+    background-size: cover; /* A imagem cobre toda a tela, mantendo a proporção */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centraliza a imagem */
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    width: 100%; /* Garante que o corpo ocupe toda a largura */
+    background-color: rgba(255, 255, 255, 0.5); /* Adiciona uma leve sobrecarga caso a imagem de fundo precise ser suavizada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-attachment: fixed; /* A imagem não se move enquanto o conteúdo rola */
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      background-attachment: scroll; /* Em telas menores, a imagem pode rolar com o conteúdo */
+      background-size: cover !important; /* Garante que a imagem ocupe toda a tela */
+      background-position: center center; /* Centraliza a imagem de fundo */
+      min-height: 100vh !important; /* Garante que o corpo ocupe toda a altura da tela, mesmo em telas menores */
+    }
+  }
+  
+  header {
+    text-align: center;
+    background-color: rgba(255, 228, 225, 0.9); /* Fundo semi-transparente */
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  /* Main section */
+  main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Galeria de flores */
+  .flowers img {
+    margin: 0.5rem;
+    width: 80%; /* Ajusta a largura das imagens */
+    max-width: 250px; /* Limita a largura da imagem */
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Botões de surpresa */
+  .extra-buttons {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .extra-buttons button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 90%;
+    width: auto;
+    margin-top: 2rem;
+  }
+  
+  .extra-buttons button:hover {
+    background-color: #ff1493;
+  }
+  
+  #surprise {
+    margin-top: 2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    background-color: rgba(255, 228, 225, 0.9);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 3rem;
+    box-sizing: border-box;
+  }
+  
+  /* Ajuste responsivo para telas menores */
+  @media (max-width: 600px) {
+    .card {
+      padding: 1rem; /* Menos padding em telas pequenas */
+      margin: 1rem;  /* Margem reduzida */
+    }
+  
+    header h1 {
+      font-size: 1.5rem; /* Tamanho de fonte menor para cabeçalho */
+    }
+  
+    .extra-buttons button {
+      padding: 1rem;  /* Botão com padding reduzido */
+      font-size: 1rem; /* Tamanho de fonte ajustado */
+    }
+  
+    footer {
+      padding: 1rem; /* Ajustando o padding para o footer */
+    }
+  }
+  
